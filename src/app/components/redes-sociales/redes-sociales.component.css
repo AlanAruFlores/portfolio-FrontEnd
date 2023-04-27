@@ -1,11 +1,19 @@
+.nav-item{
+    margin-right: 1.2rem;
+}
 .nav-link{
-    transition: 1s;
     color: white;
     cursor: default;
+    transition: 1s;
 }
 .nav-link :hover{
     color:#ff764d;
     transition: 1s;
+}
+.nav-button{
+    border-radius: 0%;
+    color:white;
+    background-color: #ff764d;
 }
 @media(max-width: 991px){  
     ul{

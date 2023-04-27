@@ -1,0 +1,73 @@
+.acerca{
+    color:white;
+    padding: 2rem;
+}
+.acerca-informacion{
+    padding: 1rem 4rem;
+}
+.acerca-foto{
+    height: 20rem;
+    width: 20rem;
+    border-radius: 10rem;
+}
+.text-acerca{
+    margin-top: 0.2rem;
+    font-size: 1.8rem;
+    font-weight: 490;
+}
+
+/* Title */
+.acerca-title{
+    /* margin: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 0rem; */
+    font-weight: bold;
+    letter-spacing: 0.1rem;  
+    font-size: 2.3rem; 
+    font-family: 'Rubik', sans-serif;
+}
+.title-content{
+    color: #EDEDED;
+}
+.description-content{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.6rem;
+}
+
+.acerca-descripcion{
+    text-align: center;
+}
+.acerca-informacion{
+    border-right: #ff764d 0.5rem solid;
+    border-bottom: #ff764d 0.2rem solid;
+    /* border-left: #ff764d 0.2rem solid;
+    border-top: #ff764d 0.2rem solid; */
+
+}
+.acerca-informacion-content{
+    font-size: 1.4rem;
+}
+.acerca-button{
+    background-color: #ff764d;
+    color: #EDEDED;
+    /* border-radius: 4rem; */
+    border-radius: 0%;
+    margin-top: 1rem;
+    transition: 1s;
+}
+.acerca-button:hover{
+    background-color: #EDEDED;
+    color: #ff764d;
+    transition: 1s;
+}
+
+.line{
+    border-top: #ff764d 0.3rem solid;    
+}
+.firstLine{
+    width: 20ch;
+}
+.secondLine{
+    width: 14ch;
+}
