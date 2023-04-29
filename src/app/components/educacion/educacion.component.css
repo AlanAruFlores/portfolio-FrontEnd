@@ -1,0 +1,149 @@
+
+.educacion-section{
+    margin: 1rem;
+    border-left: #ff764d 0.4rem solid;
+}
+.educacion-title{
+    font-weight: bold;
+    letter-spacing: 0.1rem;  
+    font-size: 2.3rem; 
+    font-family: 'Rubik', sans-serif;
+    color: #EDEDED;
+}
+
+.educacion{
+    border-left: #ff764d 0.5rem solid;
+}
+.educacion-title{
+    transition: 1s;
+    font-weight: bold;
+}
+.line{
+    border-top: #ff764d 0.3rem solid;    
+}
+.firstLine{
+    width: 20ch;
+}
+.secondLine{
+    width: 14ch;
+}
+
+
+/* CARTA */
+.card{
+    transition: 1s;
+    background-color: #0b1524;
+    width: 100rem;
+    border-bottom: #080d15 0.4rem solid;
+    border-right: #080d15 0.2rem solid;
+
+}
+.card-date{
+    padding: 1rem 1rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.card-header{
+    color:#ff764d;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.9rem;
+}
+.card-text{
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+/* ANIMACIONES CARTAS */
+.card:hover{
+    transition: 1s;
+    background-color: rgba(255, 252, 252, 0.12);
+}
+
+@media(max-width: 1680px){
+
+    .card{
+        width: 80rem;
+    }
+}
+
+@media(max-width: 1438px){
+
+    .card{
+        width: 70rem;
+    }
+    .card-date{
+
+        font-size: 1rem;
+    }
+    .card-header{
+        font-size: 1.6rem;
+    }
+    .card-text{
+        font-size: 1.4rem;
+    }
+}
+@media(max-width: 1196px){
+
+    .card{
+        width: 50rem;
+    }
+    .card-date{
+
+        font-size: 1rem;
+    }
+    .card-header{
+        font-size: 1.6rem;
+    }
+    .card-text{
+        font-size: 1.4rem;
+    }
+}
+@media(max-width: 1196px){
+
+    .card{
+        width: 50rem;
+    }
+    .card-date{
+
+        font-size: 1rem;
+    }
+    .card-header{
+        font-size: 1.6rem;
+    }
+    .card-text{
+        font-size: 1.4rem;
+    }
+}
+@media(max-width: 870px){
+
+    .card{
+        width: 40rem;
+    }
+    .card-date{
+
+        font-size: 0.8rem;
+    }
+    .card-header{
+        font-size: 1.2rem;
+    }
+    .card-text{
+        font-size: 1rem;
+    }
+}
+@media(max-width: 710px){
+
+    .card{
+        width: auto;
+    }
+    .card-date{
+
+        font-size: 0.8rem;
+    }
+    .card-header{
+        font-size: 1.2rem;
+    }
+    .card-text{
+        font-size: 1rem;
+    }
+}

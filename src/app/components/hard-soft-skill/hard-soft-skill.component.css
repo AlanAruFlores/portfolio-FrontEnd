@@ -1,0 +1,40 @@
+.title-text{
+    color:#EDEDED;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 1s;
+}
+.title-text:hover{
+    transition: 1s;
+    color:#ff764d;
+}
+.columna{
+    margin-top: 2rem;
+}
+.skill-section{
+    margin: 1.7rem;
+    border-left: #ff764d 0.4rem solid;
+} 
+
+.skill-title{
+    font-weight: bold;
+    letter-spacing: 0.1rem;  
+    font-size: 2.3rem; 
+    font-family: 'Rubik', sans-serif;
+    color: #EDEDED;
+    transition: 1s;
+    font-weight: bold;
+}
+
+
+/*Decoration title*/
+.line{
+    border-top: #ff764d 0.3rem solid;    
+}
+.firstLine{
+    width: 20ch;
+}
+.secondLine{
+    width: 14ch;
+}
+

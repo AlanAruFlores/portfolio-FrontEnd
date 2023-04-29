@@ -7,6 +7,11 @@ import { EncabezadoComponent } from './components/encabezado/encabezado.componen
 import { RedesSocialesComponent } from './components/redes-sociales/redes-sociales.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
+
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { HardSoftSkillComponent } from './components/hard-soft-skill/hard-soft-skill.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +19,16 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
     EncabezadoComponent,
     RedesSocialesComponent,
     BannerComponent,
-    AcercaDeComponent
+    AcercaDeComponent,
+    ExperienciaComponent,
+    EducacionComponent,
+    HardSoftSkillComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // PODEMOS AGREGARLE PARAMETROS POR DEFECTO, PERO LE VAMOS A REALIZAR MODIFICACIONES POR LO TANTO LA VAMOS A DEJAR VACIA
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]
