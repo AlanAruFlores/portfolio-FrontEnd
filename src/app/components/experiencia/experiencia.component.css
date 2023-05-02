@@ -1,6 +1,5 @@
 
 .experiencia-section{
-    margin: 1rem;
     border-left: #ff764d 0.4rem solid;
 }
 .experiencia-title{
@@ -33,7 +32,7 @@
 .card{
     transition: 1s;
     background-color: #0b1524;
-    width: 100rem;
+    /* width: 100rem; */
     border-bottom: #080d15 0.4rem solid;
     border-right: #080d15 0.2rem solid;
 
@@ -60,7 +59,7 @@
     background-color: rgba(255, 252, 252, 0.12);
 }
 
-@media(max-width: 1680px){
+/* @media(max-width: 1680px){
 
     .card{
         width: 80rem;
@@ -146,4 +145,4 @@
     .card-text{
         font-size: 1rem;
     }
-}
+} */

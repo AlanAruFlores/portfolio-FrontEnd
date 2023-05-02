@@ -1,5 +1,8 @@
+.containter{
+    margin-top: 4rem;
+}
 .title-text{
-    color:#EDEDED;
+    color:#f6f6f6;
     font-weight: bold;
     font-size: 1rem;
     transition: 1s;
@@ -13,20 +16,57 @@
 }
 .skill-section{
     margin: 1.7rem;
-    border-left: #ff764d 0.4rem solid;
+    /* border-left: #ff764d 0.4rem solid; */
 } 
+.skill-column{
+    transition: 1s;
+    border-left: #ff764d 0.4rem solid;
 
+}
+/* .skill-column:hover{
+    transition: 1s;
+    box-shadow: 4px 4px 4px #ff764d;
+
+} */
 .skill-title{
     font-weight: bold;
     letter-spacing: 0.1rem;  
     font-size: 2.3rem; 
     font-family: 'Rubik', sans-serif;
-    color: #EDEDED;
+    color: #f6f6f6;
     transition: 1s;
     font-weight: bold;
 }
+.title-2{
+    font-size: 1.7rem; 
+}
+/*BAR SKILLS*/
+.skill{  
+    padding: 14px 20px;
+    transition: 1s;
+    /* border-left: #ff764d 0.2rem solid; */
+    /* box-shadow: 4px 4px 4px #ff764d; */
+}
+.skill:hover{  
+    transition: 1s;
+        /* box-shadow: 4px 4px 4px #f6f6f6; */
 
-
+}
+.skill-subtitle{
+    color:#f6f6f6;
+}
+.progress{
+    /* -webkit-box-shadow: none; */
+    box-shadow: none;
+    background-color: #0b1524;
+    border: #f6f6f6 solid 0.1rem;
+    border-radius: 0.2rem;
+    width: auto;    
+    height: 1.4rem;
+}
+.progress-bar{
+    background-color:#ff764d;
+}
 /*Decoration title*/
 .line{
     border-top: #ff764d 0.3rem solid;    

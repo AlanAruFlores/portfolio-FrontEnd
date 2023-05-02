@@ -38,13 +38,14 @@
 .acerca-descripcion{
     text-align: center;
 }
-.acerca-informacion{
+/* .acerca-informacion{
     border-right: #ff764d 0.5rem solid;
     border-bottom: #ff764d 0.2rem solid;
     /* border-left: #ff764d 0.2rem solid;
     border-top: #ff764d 0.2rem solid; */
-
-}
+    .acerca-informacion{
+        box-shadow: 8px 4px 4px #ff764d;        
+    }
 .acerca-informacion-content{
     font-size: 1.4rem;
 }
@@ -70,4 +71,27 @@
 }
 .secondLine{
     width: 14ch;
+}
+
+
+/* Responsive */
+@media(max-width:1308px){
+    .acerca-foto{
+        height: 17rem;
+        width: 17rem;
+        border-radius: 10rem;
+    }
+}
+@media(max-width: 1438px){
+
+    .acerca-informacion-content{
+        font-size: 1.4rem;
+
+    }
+}
+@media(max-width: 870px){
+    .acerca-informacion-content{
+        font-size: 1rem;
+
+    }
 }

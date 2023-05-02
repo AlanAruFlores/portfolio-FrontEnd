@@ -1,0 +1,68 @@
+.proyecto-section{
+    margin: 1.7rem;
+    margin-top: 4rem;
+
+    border-left: #ff764d 0.4rem solid;
+    padding: 0rem 1rem;
+}
+.proyecto-title-main{
+    color:#EDEDED;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold; 
+    font-size: 2.3rem; 
+}
+.proyecto-title{
+    color:#ff764d;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold; 
+}
+.proyecto-information{
+    color:#EDEDED;
+    font-size: 1.2rem;
+}
+.proyecto-image{
+    box-shadow: 4px 4px 10px #ff764d;
+}
+/*EXTRA*/
+.line{
+    border-top: #ff764d 0.3rem solid;    
+}
+.firstLine{
+    width: 20ch;
+}
+.secondLine{
+    width: 14ch;
+} 
+
+
+
+/*RESPONSIVE*/
+
+/* .experiencia-section{
+    margin: 1rem;
+    border-left: #ff764d 0.4rem solid;
+}
+.experiencia-title{
+    font-weight: bold;
+    letter-spacing: 0.1rem;  
+    font-size: 2.3rem; 
+    font-family: 'Rubik', sans-serif;
+    color: #EDEDED;
+}
+
+.experience{
+    border-left: #ff764d 0.5rem solid;
+}
+.experience-title{
+    transition: 1s;
+    font-weight: bold;
+}
+.line{
+    border-top: #ff764d 0.3rem solid;    
+}
+.firstLine{
+    width: 20ch;
+}
+.secondLine{
+    width: 14ch;
+} */
