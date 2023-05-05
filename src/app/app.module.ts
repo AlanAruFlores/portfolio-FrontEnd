@@ -14,6 +14,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HardSoftSkillComponent } from './components/hard-soft-skill/hard-soft-skill.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ServicePersonaService } from './service/service-persona.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,9 +32,10 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
     BrowserModule,
     AppRoutingModule,
     // PODEMOS AGREGARLE PARAMETROS POR DEFECTO, PERO LE VAMOS A REALIZAR MODIFICACIONES POR LO TANTO LA VAMOS A DEJAR VACIA
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServicePersonaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
