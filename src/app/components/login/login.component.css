@@ -1,0 +1,42 @@
+section{
+    color:#EDEDED;
+}
+.title-login{
+    color:#EDEDED;
+}
+.login-span.dos{
+    color:#ff764d;
+}
+/* Formulario */
+.card{
+    background-color: #0d1828;
+    border: #ff764d 0.1rem solid;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+}
+
+.input-login{
+    background-color: #0d1828;
+    color:#ff764d;
+    border-bottom: #ff764d 0.1rem solid;
+}
+.input-label{
+    font-weight: bold;
+}
+.link-registro{
+    color:#ff764d;
+}
+
+.button-login{
+    transition: 1s;
+    background-color:#ff764d;
+    color:#EDEDED;
+}
+.button-login:hover{
+    transition: 1s;
+    background-color:#EDEDED;
+    color:#ff764d;
+}
+.button-icon{
+    color:#ff764d;
+}

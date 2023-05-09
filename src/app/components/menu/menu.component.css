@@ -1,0 +1,42 @@
+.navbar{
+    background-color: #0b1524;
+    color: white;
+}
+.encabezado-logo{
+    width: 10rem;
+    height: 6.4rem;
+}
+.menu-navegacion{
+    display: flex;
+    justify-content: space-between;
+}
+.encabezado-menu{
+    display: none;
+}
+.encabezado-menu-logo{
+    color:white;
+}
+.dropdown-menu{
+    background-color:#0b1524;
+}
+.dropdown-item{
+    color:#ff764d; 
+}
+/* RESPONSIVE DESING */
+@media(max-width: 991px){
+    /* .menu-navegacion{
+        display: inline-block;
+        text-align: center;
+    }
+    .encabezado-logo{
+        width: 14rem;
+        height: 9rem;
+    } */
+    app-redes-sociales{
+        display: none;
+    }
+    .encabezado-menu{
+        display: inline;
+    }
+
+}

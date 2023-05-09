@@ -1,0 +1,64 @@
+<app-menu></app-menu>
+<section class="">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start">
+      <div class="container">
+        <div class="row gx-lg-5 align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h1 class="title-login my-5 display-3 fw-bold ls-tight">    
+              <span class="login-span-dos"></span> 
+              <span class="login-span"></span>
+            </h1>
+            <!-- The best offer <br>for your business -->
+            <p>
+                Si estas leyendo esto, rellena los campos correspondientes para acceder 
+                a la seccion de edicion del portfolio. Si no tiene una cuenta, vé a "Registrarse".
+            </p>
+          </div>
+  
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="card">
+              <div class="card-body py-5 px-md-5">
+                <form #f="ngForm" (ngSubmit)="ingresar()" method="post">
+                  <div class="form-outline mb-4">
+                    <input name="nombreUsuario" type="text" class="input-login form-control" id="nombreUsuario" [(ngModel)]="nombreUsuario"/>
+                    <label class="input-label form-label" for="nombreUsuario">Username</label>
+                  </div>
+                    <div class="form-outline mb-4">
+                    <input type="password" id="form3Example4" class="input-login form-control" name ="contraseniaUsuario"  [(ngModel)]="contraseniaUsuario"/>
+                    <label class="input-label form-label" for="form3Example4" >Password</label>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button type="submit" class="button-login btn btn-primary btn-block mb-4">
+                        INICIAR SESION
+                    </button>                 
+                  </div>
+                  <!-- Register buttons -->
+                  <div class="text-center">
+                    <p>¿No tienes una cuenta?. Registrate aca:</p>
+                    <a class="link-registro" href="#">Registrarse</a>
+                    <p class="mt-2">Sigueme en:</p>                    
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-facebook-f"></i>
+                    </button>
+                    <button type="button" class="button-icon btn btn-link btn-floating mx-1">
+                      <i class="fab fa-google"></i>
+                    </button>
+                    <button type="button" class="button-icon btn btn-link btn-floating mx-1">
+                      <i class="fab fa-twitter"></i>
+                    </button>  
+                    <button type="button" class="button-icon btn btn-link btn-floating mx-1">
+                      <i class="fab fa-github"></i>
+                    </button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->

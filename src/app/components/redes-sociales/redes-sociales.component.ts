@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-redes-sociales',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RedesSocialesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  public irLogin(){
+    this.router.navigate(["/login"]);
+  }
 }

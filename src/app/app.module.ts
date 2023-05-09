@@ -16,6 +16,12 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ServicePersonaService } from './service/service-persona.service';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { MenuComponent } from './components/menu/menu.component';
+
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,13 +33,19 @@ import { ServicePersonaService } from './service/service-persona.service';
     EducacionComponent,
     HardSoftSkillComponent,
     ProyectosComponent,
+    HomeComponent,
+    LoginComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     // PODEMOS AGREGARLE PARAMETROS POR DEFECTO, PERO LE VAMOS A REALIZAR MODIFICACIONES POR LO TANTO LA VAMOS A DEJAR VACIA
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule
+    HttpClientModule,
+  
   ],
   providers: [ServicePersonaService],
   bootstrap: [AppComponent]
