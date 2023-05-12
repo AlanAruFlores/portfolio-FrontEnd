@@ -4,31 +4,57 @@
             <h2 class="experiencia-title">Experiencias</h2>
             <p class="line firstLine"></p>
             <p class="line secondLine"></p> 
-            <div class="card text-white mb-4 mt-4" >
-                <div class="card-date">
-                    <p>
-                        <i class="fa-solid fa-calendar" style="color: #ff764d;"></i>&#160;&#160;<span class="date-start">12/02/2004</span>&#160;-&#160;<span class="date-end">20/122020</span>
-                    </p>
-                </div>
-                <div class="card-header mt-2">Experiencia</div>
+
+            <button *ngIf="!formularioCrear" style="color: #EDEDED; background-color: #ff764d;" class ="btn btn-primary" (click)="crearExperiencia()">AGREGAR</button>
+            <button *ngIf="formularioCrear" style="color: #EDEDED; background-color: #ff764d;" class ="btn btn-primary" (click)="cerrarExperiencia()">CERRAR</button>
+
+            <!-- FORMULARIO CREAR -->
+            <div *ngIf="formularioCrear" class="card text-white mb-4 mt-4">
+                <div class="card-header mt-2">NUEVA EXPERIENCIA</div>
                 <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste expedita tempore deleniti fugiat culpa incidunt mollitia voluptates, beatae maxime.</p>
+                    <app-experiencia-nueva></app-experiencia-nueva>
                 </div>
             </div>
-            <div class="card text-white mb-4 mt-4" >
-                <div class="card-date">
-                    <p>
-                        <i class="fa-solid fa-calendar" style="color: #ff764d;"></i>&#160;&#160;<span class="date-start">12/02/2004</span>&#160;-&#160;<span class="date-end">20/12/2020</span>
-                    </p>
-                </div>
-                <div class="card-header mt-2">Experiencia 2</div>
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste expedita tempore deleniti fugiat culpa incidunt mollitia voluptates, beatae maxime.</p>
-                </div>
-            </div>
-            <div class="card text-white mb-4 mt-4" *ngIf="vacio">
-                <div class="card-header mt-2 text-center">NO SE REGISTRO NINGUNA EDUCACION</div>
+            
+            <div *ngFor="let exp of experienciaListas">
+                <app-card-experiencia [exp]="exp"></app-card-experiencia>
             </div>
         </div>
     </div>
 </div>
+            <!-- <div class="card text-white mb-4 mt-4" *ngIf="vacio">
+                <div class="card-header mt-2 text-center">NO SE REGISTRO NINGUNA EDUCACION</div>
+            </div> -->
+<!-- <div class="card text-white mb-4 mt-4" >
+    <div class="card-date">
+        <p>
+            <i class="fa-solid fa-calendar" style="color: #ff764d;"></i>&#160;&#160;<span class="date-start">12/02/2004</span>&#160;-&#160;<span class="date-end">20/122020</span>
+        </p>
+    </div>
+    <div class="card-header mt-2">Experiencia</div>
+    <div class="card-body">
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste expedita tempore deleniti fugiat culpa incidunt mollitia voluptates, beatae maxime.</p>
+    </div>
+</div> -->
+
+
+                <!-- <div class="card-date text-between d-flex justify-content-between">
+                    <p>
+                        <i class="fa-solid fa-calendar" style="color: #ff764d;"></i>&#160;&#160;<span class="date-start">{{exp.fechaInicio}}</span>&#160;-&#160;<span class="date-end">{{exp.fechaFinalizacion}}</span>
+                    </p>
+                    <div>
+                        <span *ngIf="modificar != true"><a (click)="habilitarModificar()" class="btn btn-sm"  style="color: #EDEDED; background-color: #ff764d;"><i class="fa-sharp fa-solid fa-pen-to-square"></i></a>&#160;</span>
+                        <span *ngIf="modificar">
+                            <a  (click)="desahibilitarModificar()" class="btn btn-sm"  style="color: #EDEDED; background-color: #ff764d;" ><i class="fa-solid fa-x"></i></a>&#160;
+                        </span>
+                        <a href="" class="btn btn-sm"  style="color: #EDEDED; background-color: #f74545;"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                </div>
+                <div class="card-header mt-2">{{exp.nombre}}</div>
+                <div class="card-body">
+                  <p class="card-text">{{exp.descripcion}}</p>
+                </div>
+
+                <div *ngIf="modificar">
+                    <app-modificar-experiencia [experiencia]="exp"></app-modificar-experiencia>
+                </div>-->

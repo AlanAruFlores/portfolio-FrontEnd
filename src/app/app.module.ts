@@ -22,6 +22,10 @@ import { MenuComponent } from './components/menu/menu.component';
 
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { interceptorProvider, InterceptorService } from './service/interceptor.service';
+import { ExperienciaNuevaComponent } from './components/experiencia/experiencia-nueva/experiencia-nueva.component';
+import { ModificarExperienciaComponent } from './components/experiencia/modificar-experiencia/modificar-experiencia.component';
+import { CardExperienciaComponent } from './components/experiencia/card-experiencia/card-experiencia.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +40,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     LoginComponent,
     MenuComponent,
+    ExperienciaNuevaComponent,
+    ModificarExperienciaComponent,
+    CardExperienciaComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +54,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
   
   ],
-  providers: [ServicePersonaService],
+  providers: [ServicePersonaService,interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

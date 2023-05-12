@@ -1,0 +1,39 @@
+<form class="card text-white mb-4 mt-4" (ngSubmit)="actualizarExperiencia()" method="post">
+    <div class="card-date text-between d-flex justify-content-between">
+        <div class="d-flex justify-content-between">
+            <div class="dateDiv input-group">
+                <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-calendar" style="color: #ff764d;"></i>
+                </span>
+                <input class="form-control" type="date" name="experiencia.fechaInicio" [value]="fechaInic" [(ngModel)] ="experiencia.fechaInicio">
+            </div>
+            <div class="dateDiv input-group">
+                <span class="input-group-text" id="addon-wrapping"><i class="fa-sharp fa-solid fa-dash"></i></span>
+                <input class="form-control" type="date" name="experiencia.fechaFinalizacion" [(ngModel)] ="experiencia.fechaFinalizacion">
+            </div>
+        </div>
+
+            <div>
+                <span>
+                    <a class="btn btn-sm"  style="color: #EDEDED; background-color: #ff764d;" ><i class="fa-solid fa-x"></i></a>&#160;
+                </span>
+            </div>
+    </div>
+    <div class="card-header"><input class="form-control" type="text" name="experiencia.nombre" placeholder="nombre" [(ngModel)] ="experiencia.nombre">
+    </div>
+    <div class="card-body">
+         <p class="card-text"><input class="form-control" type="text" name="experiencia.descripcion" placeholder="nombre"  [(ngModel)] ="experiencia.descripcion">
+         </p>
+    </div>
+    <button type="submit" class="btn btn-md">Actualizar</button>
+</form>
+
+<!-- <form (ngSubmit)="actualizarExperiencia()" method="post">
+    <input type="hidden" value="experiencia.id" name="experiencia.id" [(ngModel)] ="experiencia.id">
+    <input class="form-control" type="text" name="experiencia.nombre" placeholder="nombre" [(ngModel)] ="experiencia.nombre">
+    <input class="form-control" type="text" name="experiencia.descripcion" placeholder="nombre"  [(ngModel)] ="experiencia.descripcion">
+    <input class="form-control" type="date" name="experiencia.fechaInicio"  [value]="fechaInic" [(ngModel)] ="experiencia.fechaInicio">
+    <input class="form-control" type="date" name="experiencia.fechaFinalizacion" [(ngModel)] ="experiencia.fechaFinalizacion">
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+</form>
+ -->
+

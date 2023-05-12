@@ -1,0 +1,8 @@
+<form (ngSubmit) = "nuevaExperiencia()">
+    <input class="form-control" type="text" name="nombreExperiencia" placeholder="nombre" [(ngModel)] ="nombreExperiencia">
+    <input class="form-control" type="text" name="descripcionExperiencia" placeholder="nombre"  [(ngModel)] ="descripcionExperiencia">
+    <input class="form-control" type="date" name="fechaInic"  [(ngModel)] ="fechaInic">
+    <input class="form-control" type="date" name="fechaFinalizacion" [(ngModel)] ="fechaFinalizacion">
+    <button type="submit" class="btn btn-primary">Crear</button>
+</form>
+

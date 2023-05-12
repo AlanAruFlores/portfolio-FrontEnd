@@ -1,0 +1,21 @@
+<div *ngIf="modificar!=true" class="card text-white mb-4 mt-4">
+    <div class="card-date text-between d-flex justify-content-between">
+        <p>
+            <i class="fa-solid fa-calendar" style="color: #ff764d;"></i>&#160;&#160;<span class="date-start">{{exp.fechaInicio}}</span>&#160;-&#160;<span class="date-end">{{exp.fechaFinalizacion}}</span>
+        </p>
+            <div>
+                <span><a (click)="habilitarModificar()" class="btn btn-sm"  style="color: #EDEDED; background-color: #ff764d;"><i class="fa-sharp fa-solid fa-pen-to-square"></i></a>&#160;</span>
+                <!-- <span *ngIf="modificar">
+                    <a  (click)="desahibilitarModificar()" class="btn btn-sm"  style="color: #EDEDED; background-color: #ff764d;" ><i class="fa-solid fa-x"></i></a>&#160;
+                </span> -->
+                <a href="" class="btn btn-sm"  style="color: #EDEDED; background-color: #f74545;"><i class="fa-solid fa-trash"></i></a>
+            </div>
+    </div>
+    <div class="card-header mt-2">{{exp.nombre}}</div>
+    <div class="card-body">
+         <p class="card-text">{{exp.descripcion}}</p>
+    </div>  
+</div>
+<div *ngIf="modificar">
+    <app-modificar-experiencia [experiencia]="exp"></app-modificar-experiencia>
+</div>  
