@@ -58,6 +58,9 @@
     transition: 1s;
     background-color: rgba(255, 252, 252, 0.12);
 }
+.card-crear:hover{
+    background-color: #0b1524;
+}
 
 /* @media(max-width: 1680px){
 

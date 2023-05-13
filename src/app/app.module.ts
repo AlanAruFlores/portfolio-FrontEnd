@@ -26,6 +26,10 @@ import { interceptorProvider, InterceptorService } from './service/interceptor.s
 import { ExperienciaNuevaComponent } from './components/experiencia/experiencia-nueva/experiencia-nueva.component';
 import { ModificarExperienciaComponent } from './components/experiencia/modificar-experiencia/modificar-experiencia.component';
 import { CardExperienciaComponent } from './components/experiencia/card-experiencia/card-experiencia.component';
+import { CardEducacionComponent } from './components/educacion/card-educacion/card-educacion.component';
+import { EducacionNuevaComponent } from './components/educacion/educacion-nueva/educacion-nueva.component';
+import { ModificarEducacionComponent } from './components/educacion/modificar-educacion/modificar-educacion.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +47,10 @@ import { CardExperienciaComponent } from './components/experiencia/card-experien
     ExperienciaNuevaComponent,
     ModificarExperienciaComponent,
     CardExperienciaComponent,
-  ],
+    CardEducacionComponent,
+    EducacionNuevaComponent,
+    ModificarEducacionComponent 
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

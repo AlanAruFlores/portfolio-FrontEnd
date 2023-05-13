@@ -4,24 +4,24 @@
             <div class="dateDiv input-group">
                 <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-calendar" style="color: #ff764d;"></i>
                 </span>
-                <input class="form-control" type="date" name="experiencia.fechaInicio" [value]="fechaInic" [(ngModel)] ="experiencia.fechaInicio">
+                <input class="form-control" type="date" name="fechaInicio" [(ngModel)] ="fechaInicio">
             </div>
             <div class="dateDiv input-group">
                 <span class="input-group-text" id="addon-wrapping"><i class="fa-sharp fa-solid fa-dash"></i></span>
-                <input class="form-control" type="date" name="experiencia.fechaFinalizacion" [(ngModel)] ="experiencia.fechaFinalizacion">
+                <input class="form-control" type="date" name="fechaFinalizacion" [(ngModel)] ="fechaFinalizacion">
             </div>
         </div>
 
             <div>
-                <span>
-                    <a class="btn btn-sm"  style="color: #EDEDED; background-color: #ff764d;" ><i class="fa-solid fa-x"></i></a>&#160;
+                <span (click)="cerrarEdicion()">
+                    <a class="btn btn-sm"  style="color: #EDEDED; background-color: #ff764d;" ><i class="fa-solid fa-x" ></i></a>&#160;
                 </span>
             </div>
     </div>
-    <div class="card-header"><input class="form-control" type="text" name="experiencia.nombre" placeholder="nombre" [(ngModel)] ="experiencia.nombre">
+    <div class="card-header"><input class="form-control" type="text" name="nombreExperiencia" placeholder="Nombre Experiencia" [(ngModel)] ="nombreExperiencia">
     </div>
     <div class="card-body">
-         <p class="card-text"><input class="form-control" type="text" name="experiencia.descripcion" placeholder="nombre"  [(ngModel)] ="experiencia.descripcion">
+         <p class="card-text"><input class="form-control" type="text" name="descripcionExperiencia" placeholder="Descripcion"  [(ngModel)] ="descripcionExperiencia">
          </p>
     </div>
     <button type="submit" class="btn btn-md">Actualizar</button>

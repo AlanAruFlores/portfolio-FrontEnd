@@ -1,0 +1,19 @@
+<div *ngIf="modificar!=true" class="card text-white mb-4 mt-4">
+    <div class="card-date text-between d-flex justify-content-between">
+        <p>
+            <i class="fa-solid fa-calendar" style="color: #ff764d;"></i>&#160;&#160;<span class="date-start">{{educacion.fechaInicio}}</span>&#160;-&#160;<span class="date-end">{{educacion.fechaFinalizacion}}</span>
+        </p>
+            <div *ngIf="estaLogeado">
+                <span (click)="habilitarModificar()"><a class="btn btn-sm"  style="color: #EDEDED; background-color: #ff764d;"><i class="fa-sharp fa-solid fa-pen-to-square"></i></a>&#160;</span>
+            
+                <a (click)="borrarEducacion()" class="btn btn-sm"  style="color: #EDEDED; background-color: #f74545;"><i class="fa-solid fa-trash"></i></a>
+            </div>
+    </div>
+    <div class="card-header mt-2">{{educacion.nombre}}</div>
+    <div class="card-body">
+         <p class="card-text">{{educacion.descripcion}}</p>
+    </div>  
+</div>
+<div *ngIf="modificar">
+    <app-modificar-educacion (deshabilitarEdicion)="desahibilitarModificar($event)" [educacion]="educacion"></app-modificar-educacion>
+</div>  

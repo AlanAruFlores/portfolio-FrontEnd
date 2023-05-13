@@ -25,9 +25,6 @@ export class ServicePersonaService {
     return this.http.post<Persona>(this.HTTP_URL+"/post",obj);
   }
 
-  public deletePersona(id:number){
-    return this.http.delete(this.HTTP_URL+"/delete/"+id);
-  }
 
   // @PutMapping("/editar/{id}")
   // public String updateUser(@PathVariable("id")Long id,
@@ -35,8 +32,7 @@ export class ServicePersonaService {
   //         @RequestParam("apellido")String apellido,
   //         @RequestParam("imagen")String imagen){
       
-  public editarPersona(id:number, nombre:string, apellido:string, imagen:string){
-    return this.http.put(`${this.HTTP_URL}/editar/${id}?nombre=${nombre}&apellido=${apellido}
-    &imagen=${imagen}`,null);
+  public editarPersona(id:number, nombre:string, descripcion:string){
+    return this.http.post(`${this.HTTP_URL}/editar/${id}?nombre=${nombre}&descripcion=${descripcion}`,null);
   }
 }

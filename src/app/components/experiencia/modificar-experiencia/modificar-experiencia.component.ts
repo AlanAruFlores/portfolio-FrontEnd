@@ -9,32 +9,40 @@ import { ExperienciaServiceService } from 'src/app/service/experiencia-service.s
 })
 export class ModificarExperienciaComponent implements OnInit {
 
+  //CAMPOS A ACTUALIZAR
   @Input() experiencia!:Experiencia;
+  nombreExperiencia!:string;
+  descripcionExperiencia!:string;
+  fechaInicio!:Date;
+  fechaFinalizacion!:Date;
 
   //Mandare el dato
-  @Output() abierto = new EventEmitter();
+  @Output() deshabilitarEdicion:EventEmitter<boolean> = new EventEmitter();
 
-  fechaInic!:string;
+  constructor(private serviceExperiencia:ExperienciaServiceService) { 
 
-  constructor(private serviceExperiencia:ExperienciaServiceService) { }
+  }
 
   ngOnInit(): void {
     // console.log(this.experiencia);
-    this.fechaInic=this.tenerFechaString();
+    this.nombreExperiencia = this.experiencia.nombre;
+    this.descripcionExperiencia = this.experiencia.descripcion;
+    this.fechaInicio = this.experiencia.fechaInicio;
+    this.fechaFinalizacion = this.experiencia.fechaFinalizacion;
   }
 
   actualizarExperiencia():void{
-    let experienciaActualizada:Experiencia=new Experiencia(this.experiencia.nombre,this.experiencia.descripcion,this.experiencia.fechaInicio, this.experiencia.fechaFinalizacion);
+    let experienciaActualizada:Experiencia=new Experiencia(this.nombreExperiencia,this.descripcionExperiencia,this.fechaInicio, this.fechaFinalizacion);
 
     this.serviceExperiencia.update(this.experiencia.id,experienciaActualizada).subscribe((data)=>{
       console.log(data);
     });
+    this.cerrarEdicion();
     window.location.reload();
-
-  }
-  tenerFechaString():string{
-    return this.experiencia.fechaInicio.getDate()+"-"+this.experiencia.fechaInicio.getMonth()+"-"+this.experiencia.fechaInicio.getFullYear();
   }
 
+  cerrarEdicion():void{
+    this.deshabilitarEdicion.emit(false);
+  }
 
 }

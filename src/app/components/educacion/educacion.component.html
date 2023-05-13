@@ -1,25 +1,50 @@
 <div class="container-fluid mt-4">
     <div class="row educacion-section">
         <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="educacion-title">Educacion</h2>
+            <h2 class="educacion-title">
+                Educacion
+                <span (click)="crearEducacion()" *ngIf="!formularioCrear && estaLogeado">
+                    <button  style="color: #EDEDED; background-color: #ff764d;" class ="btn btn-sm">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </span>
+                <span (click)="cerrarEducacion()" *ngIf="formularioCrear && estaLogeado">
+                    <button  style="color: #EDEDED; background-color: #ff764d;" class ="btn btn-sm">
+                        <i class="fa-solid fa-x" ></i>
+                   </button>
+                </span>
+            </h2>
             <p class="line firstLine"></p>
             <p class="line secondLine"></p> 
-            <div class="card text-white mb-4 mt-4" >
-                <div class="card-date">
-                    <p>
-                        <i class="fa-solid fa-calendar" style="color: #ff764d;"></i>&#160;&#160;<span class="date-start">12/02/2004</span>&#160;-&#160;<span class="date-end">20/12/2020</span>
-                    </p>
-                </div>
-                <div class="card-header mt-2">Educacion</div>
+            <!-- FORMULARIO CREAR -->
+            <div *ngIf="formularioCrear" class="card-crear card text-white mb-4 mt-4">
+                <div class="card-header mt-2">NUEVA EDUCACION</div>
                 <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste expedita tempore deleniti fugiat culpa incidunt mollitia voluptates, beatae maxime.</p>
+                    <app-educacion-nueva></app-educacion-nueva>
                 </div>
             </div>
 
-            <div class="card text-white mb-4 mt-4" *ngIf="vacio">
+
+            <div *ngFor="let educ of educacionLista">
+                <app-card-educacion [educacion] = "educ"></app-card-educacion>
+            </div>
+
+            <div class="card text-white mb-4 mt-4" *ngIf="educacionLista.length==0">
                 <div class="card-header mt-2 text-center">NO SE REGISTRO NINGUNA EDUCACION</div>
             </div>
         </div>
         
     </div>
 </div>
+
+<!-- <div class="card text-white mb-4 mt-4" >
+    <div class="card-date">
+        <p>
+            <i class="fa-solid fa-calendar" style="color: #ff764d;"></i>&#160;&#160;<span class="date-start">12/02/2004</span>&#160;-&#160;<span class="date-end">20/12/2020</span>
+        </p>
+    </div>
+    <div class="card-header mt-2">Educacion</div>
+    <div class="card-body">
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste expedita tempore deleniti fugiat culpa incidunt mollitia voluptates, beatae maxime.</p>
+    </div>
+</div> -->

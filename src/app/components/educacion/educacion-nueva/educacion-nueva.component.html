@@ -1,20 +1,24 @@
-<form [formGroup]="forms" (ngSubmit) = "nuevaExperiencia()">
-    <input class="form-control" type="text" name="nombreExperiencia" placeholder="Experiencia" [(ngModel)] ="nombreExperiencia" formControlName="nombre">
-    <label>Experiencia</label><br>
+<form [formGroup]="forms" (ngSubmit) = "nuevaEducacion()">
+    <input class="form-control" type="text" name="nombreEducacion" placeholder="Nombre" [(ngModel)] ="nombreEducacion" formControlName="nombre">
+    <label>Educacion</label><br>
     <label *ngIf="tieneErrores" class="label-error" style="color:#ee4b4b">*Error</label>
     <br><br>
-    <input class="form-control" type="text" name="descripcionExperiencia" placeholder="Descripcion"  [(ngModel)] ="descripcionExperiencia" formControlName="descripcion">
+    
+    <input class="form-control" type="text" name="descripcionEducacion" placeholder="Descripcion"  [(ngModel)] ="descripcionEducacion" formControlName="descripcion">
     <label>Descripcion</label><br>
     <label *ngIf="tieneErrores" class="label-error" style="color:#ee4b4b">*Error</label>
     <br><br>
+
     <input class="form-control" type="date" name="fechaInic"  [(ngModel)] ="fechaInic" formControlName="fechaI">
     <label>Fecha de Inicio</label><br>
     <label *ngIf="tieneErrores" class="label-error" style="color:#ee4b4b">*Error</label>
     <br><br>
+
     <input class="form-control" type="date" name="fechaFinalizacion" [(ngModel)] ="fechaFinalizacion" formControlName="fechaF">
     <label>Fecha de Finalizacion</label><br>
     <label *ngIf="tieneErrores" class="label-error" style="color:#ee4b4b">*Error</label>
     <br><br>
-    <button type="submit" class="buttonCrear btn btn-primary" >Crear</button>
+
+    <button type="submit" class="buttonCrear btn btn-primary">Crear</button>
 </form>
 

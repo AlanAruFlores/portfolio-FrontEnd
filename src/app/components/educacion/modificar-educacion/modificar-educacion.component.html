@@ -1,0 +1,28 @@
+<form class="card text-white mb-4 mt-4" (ngSubmit)="actualizarEducacion()" method="post">
+    <div class="card-date text-between d-flex justify-content-between">
+        <div class="d-flex justify-content-between">
+            <div class="dateDiv input-group">
+                <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-calendar" style="color: #ff764d;"></i>
+                </span>
+                <input class="form-control" type="date" name="fechaInicio" [(ngModel)] ="fechaInicio">
+            </div>
+            <div class="dateDiv input-group">
+                <span class="input-group-text" id="addon-wrapping"><i class="fa-sharp fa-solid fa-dash"></i></span>
+                <input class="form-control" type="date" name="fechaFinalizacion" [(ngModel)] ="fechaFinalizacion">
+            </div>
+        </div>
+
+            <div>
+                <span (click)="cerrarEdicion()">
+                    <a class="btn btn-sm"  style="color: #EDEDED; background-color: #ff764d;" ><i class="fa-solid fa-x" ></i></a>&#160;
+                </span>
+            </div>
+    </div>
+    <div class="card-header"><input class="form-control" type="text" name="nombreEducacion" placeholder="Nombre Nuevo" [(ngModel)] ="nombreEducacion">
+    </div>
+    <div class="card-body">
+         <p class="card-text"><input class="form-control" type="text" name="descripcionEducacion" placeholder="Descripcion"  [(ngModel)] ="descripcionEducacion">
+         </p>
+    </div>
+    <button type="submit" class="btn btn-md">Actualizar</button>
+</form>

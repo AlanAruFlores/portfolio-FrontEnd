@@ -73,7 +73,31 @@
     width: 14ch;
 }
 
+.buttonEdicion{
+    float: right;
+}
 
+/*FORMS*/
+.formInput{
+    background-color: #0b1524;
+    color:#ff764d;
+    border-radius: 1rem;
+    border:solid #ff764d 0.1rem;
+} 
+.formInput:enabled{
+    background-color: #0b1524;
+    color:#ff764d;
+}    
+.textArea{
+    background-color: #0b1524;
+    color:#ff764d;
+    border:solid #ff764d 0.1rem;
+    border-radius: 1rem;
+}
+.textArea:enabled{
+    background-color: #0b1524;
+    color:#ff764d;
+}
 /* Responsive */
 @media(max-width:1308px){
     .acerca-foto{

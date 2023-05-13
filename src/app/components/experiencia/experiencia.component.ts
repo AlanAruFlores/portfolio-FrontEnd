@@ -29,6 +29,7 @@ export class ExperienciaComponent implements OnInit {
   public tenerLista():void{
     this.experienciaService.getLista().subscribe((data)=>{this.experienciaListas = data});
   }
+  
   public crearExperiencia(){
     this.formularioCrear=true;
   }
