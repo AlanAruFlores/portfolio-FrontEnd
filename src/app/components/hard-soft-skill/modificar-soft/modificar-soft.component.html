@@ -1,0 +1,17 @@
+<form class="skill px-4 mt-4" (ngSubmit)="actualizar()" [formGroup] ="forms">
+    <div class="d-flex justify-content-between">
+        <span class="skill-subtitle">
+            <input type="text" class="form-control input-data" placeholder="Skill" [(ngModel)]="nombreSkill" name="nombreSkill" formControlName="nombre">
+            <label *ngIf="tieneErrores" class="label-error" style="color:#ee4b4b; font-size: 1rem;">*Error</label>
+        </span>
+        <span>
+            <a class="btn btn-sm" style="color: #EDEDED; background-color: #ff764d;" (click)="cerrarEdicion()"><i class="fa-solid fa-x" ></i></a>&#160;
+        </span>
+    </div>
+    <div class="col-sm-10 mt-4">
+        <input type="range" class="form-range input-range" [(ngModel)]="rangoSkill" name="rangoSkill">
+    </div>
+    <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="submit">Actualizar</button>
+      </div>
+</form>

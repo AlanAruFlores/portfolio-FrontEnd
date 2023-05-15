@@ -1,0 +1,52 @@
+button{
+    background-color: #ff764d;
+    color: #EDEDED;
+    transition: 1s;
+}
+button:hover{
+    transition: 1s;
+    background-color: #EDEDED;
+    color: #ff764d;
+}
+
+input{
+    background-color: #0b1524;
+    color:#ff764d;
+}
+
+input:enabled{
+    background-color: #0b1524;
+    color:#ff764d;
+}
+.input-data{
+    border-bottom: #ff764d solid 0.1rem;
+}
+
+/*CHROME*/ 
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ff764d;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 0.1rem solid #ff764d;
+    height: 16px;
+    width: 16px;
+    border-radius: 4%;
+    background: #0b1524;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ff764d;
+}

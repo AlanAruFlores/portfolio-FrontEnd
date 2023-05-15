@@ -12,34 +12,67 @@
     <div class="row skill-section">
       <div class="col-sm-12 col-md-12 col-lg-6 skill-column">
         <div class="column">
-          <h2 class="skill-title">HARD SKILLS</h2>
+
+          <h2 class="skill-title">
+            HARD SKILLS
+            <a *ngIf="!crearForm && estaLogeado" class="btn btn-sm" style="color: #EDEDED; background-color: #ff764d;" (click)="crearSkill()"><i class="fa-solid fa-plus"></i></a>
+
+            <a *ngIf="crearForm && estaLogeado" class="btn btn-sm" style="color: #EDEDED; background-color: #ff764d;" (click)="cerrarCrearSkill()"><i class="fa-solid fa-x" ></i></a>
+          </h2>
+          
           <p class="line firstLine"></p>
           <p class="line secondLine"></p>
-          
-          <div class="skill-content">
-            <div class="skill px-4 mt-4">
-              <h3 class="skill-subtitle">HTML</h3>
-                <div class="progress" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 10%"></div>
-                </div>
+
+          <div class="card-crear card text-white mb-4 mt-4" *ngIf="crearForm">
+            <div class="card-header mt-2">NUEVA HARD SKILL</div>
+            <div class="card-body">
+              <app-crear-hard></app-crear-hard>
             </div>
           </div>
+
+          <div class="skill-content" *ngFor="let hard of HSkills">
+            <app-hard-card [skill]="hard"></app-hard-card>
+          </div>
+          <div class="no-skill card"  *ngIf="HSkills.length == 0">
+            <div class="card-header">
+              <div class="card-header mt-2 text-center">NO SE REGISTRO NINGUNA HARD SKILL</div>
+            </div>
+          </div>
+
         </div>
 
       </div>
+
+      <!-- SOFT SKILL -->
       <div class="col-sm-12 col-md-12 col-lg-6 skill-column">
+
         <div class="column">
-        <h2 class="skill-title">SOFT SKILLS</h2>
-        <p class="line firstLine"></p>
-        <p class="line secondLine"></p>
-        <div class="skill-conten">
-          <div class="skill px-4 mt-4">
-            <h3 class="skill-subtitle">Ingles</h3>
-              <div class="progress" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 70%"></div>
-              </div>
+
+          <h2 class="skill-title">
+            SOFT SKILLS
+            <a *ngIf="!crearFormSoft && estaLogeado"  class="btn btn-sm" style="color: #EDEDED; background-color: #ff764d;" (click)="crearSkillSoft()"><i class="fa-solid fa-plus"></i></a>
+
+            <a *ngIf="crearFormSoft && estaLogeado" class="btn btn-sm" style="color: #EDEDED; background-color: #ff764d;" (click)="cerrarCrearSkillSoft()"><i class="fa-solid fa-x" ></i></a>
+          </h2>
+          <p class="line firstLine"></p>
+          <p class="line secondLine"></p>
+
+          <div class="card-crear card text-white mb-4 mt-4" *ngIf="crearFormSoft">
+            <div class="card-header mt-2">NUEVA SOFT SKILL</div>
+            <div class="card-body">
+              <app-crear-soft></app-crear-soft>
+            </div>
           </div>
-        </div>
+
+          <div class="skill-content" *ngFor="let soft of SSkills">
+            <app-soft-card [skill]="soft"></app-soft-card>
+          </div>
+          <div class="no-skill card"  *ngIf="SSkills.length == 0">
+            <div class="card-header">
+              <div class="card-header mt-2 text-center">NO SE REGISTRO NINGUNA SOFT SKILL</div>
+            </div>
+          </div>
+
         </div>
 
       </div>

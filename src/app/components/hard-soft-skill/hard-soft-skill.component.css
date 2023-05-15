@@ -55,6 +55,14 @@
 .skill-subtitle{
     color:#f6f6f6;
 }
+.no-skill{
+    background-color: #0b1524;
+}
+.card-header{
+    color:#ff764d;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.9rem;
+}
 .progress{
     /* -webkit-box-shadow: none; */
     box-shadow: none;
@@ -76,5 +84,40 @@
 }
 .secondLine{
     width: 14ch;
+}
+
+
+/*CARD*/
+.card{
+    transition: 1s;
+    background-color: #0b1524;
+    /* width: 100rem; */
+    border-bottom: #080d15 0.4rem solid;
+    border-right: #080d15 0.2rem solid;
+
+}
+.card-date{
+    padding: 1rem 1rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.card-header{
+    color:#ff764d;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.9rem;
+}
+.card-text{
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+/* ANIMACIONES CARTAS */
+.card:hover{
+    transition: 1s;
+    background-color: rgba(255, 252, 252, 0.12);
+}
+.card-crear:hover{
+    background-color: #0b1524;
 }
 

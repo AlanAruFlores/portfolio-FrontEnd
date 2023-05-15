@@ -29,6 +29,12 @@ import { CardExperienciaComponent } from './components/experiencia/card-experien
 import { CardEducacionComponent } from './components/educacion/card-educacion/card-educacion.component';
 import { EducacionNuevaComponent } from './components/educacion/educacion-nueva/educacion-nueva.component';
 import { ModificarEducacionComponent } from './components/educacion/modificar-educacion/modificar-educacion.component';
+import { HardCardComponent } from './components/hard-soft-skill/hard-card/hard-card.component';
+import { CrearHardComponent } from './components/hard-soft-skill/crear-hard/crear-hard.component';
+import { ModificarHardComponent } from './components/hard-soft-skill/modificar-hard/modificar-hard.component';
+import { SoftCardComponent } from './components/hard-soft-skill/soft-card/soft-card.component';
+import { CrearSoftComponent } from './components/hard-soft-skill/crear-soft/crear-soft.component';
+import { ModificarSoftComponent } from './components/hard-soft-skill/modificar-soft/modificar-soft.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +55,13 @@ import { ModificarEducacionComponent } from './components/educacion/modificar-ed
     CardExperienciaComponent,
     CardEducacionComponent,
     EducacionNuevaComponent,
-    ModificarEducacionComponent 
+    ModificarEducacionComponent,
+    HardCardComponent,
+    CrearHardComponent,
+    ModificarHardComponent,
+    SoftCardComponent,
+    CrearSoftComponent,
+    ModificarSoftComponent 
    ],
   imports: [
     BrowserModule,

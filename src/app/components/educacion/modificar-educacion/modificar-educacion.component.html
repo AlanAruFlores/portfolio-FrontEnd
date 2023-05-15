@@ -1,14 +1,14 @@
-<form class="card text-white mb-4 mt-4" (ngSubmit)="actualizarEducacion()" method="post">
+<form class="card text-white mb-4 mt-4" (ngSubmit)="actualizarEducacion()" method="post" [formGroup]="forms">
     <div class="card-date text-between d-flex justify-content-between">
         <div class="d-flex justify-content-between">
             <div class="dateDiv input-group">
                 <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-calendar" style="color: #ff764d;"></i>
                 </span>
-                <input class="form-control" type="date" name="fechaInicio" [(ngModel)] ="fechaInicio">
+                <input class="form-control" type="date" name="fechaInicio" [(ngModel)] ="fechaInicio" formControlName="fI">
             </div>
             <div class="dateDiv input-group">
                 <span class="input-group-text" id="addon-wrapping"><i class="fa-sharp fa-solid fa-dash"></i></span>
-                <input class="form-control" type="date" name="fechaFinalizacion" [(ngModel)] ="fechaFinalizacion">
+                <input class="form-control" type="date" name="fechaFinalizacion" [(ngModel)] ="fechaFinalizacion" formControlName="fF">
             </div>
         </div>
 
@@ -18,11 +18,12 @@
                 </span>
             </div>
     </div>
-    <div class="card-header"><input class="form-control" type="text" name="nombreEducacion" placeholder="Nombre Nuevo" [(ngModel)] ="nombreEducacion">
+    <div class="card-header"><input class="form-control" type="text" name="nombreEducacion" placeholder="Nombre Nuevo" [(ngModel)] ="nombreEducacion" formControlName="nombre">
     </div>
     <div class="card-body">
-         <p class="card-text"><input class="form-control" type="text" name="descripcionEducacion" placeholder="Descripcion"  [(ngModel)] ="descripcionEducacion">
+         <p class="card-text"><input class="form-control" type="text" name="descripcionEducacion" placeholder="Descripcion"  [(ngModel)] ="descripcionEducacion" formControlName="desc">
          </p>
     </div>
     <button type="submit" class="btn btn-md">Actualizar</button>
+    <label *ngIf="tieneErrores" class="label-error" style="color:#ee4b4b; font-size: 1rem;">Revise los campos</label>
 </form>

@@ -1,0 +1,11 @@
+<form (ngSubmit)="crearSkill()">
+    <div class="col-sm-10">
+      <input type="text" class="form-control input-data" placeholder="Skill" [(ngModel)]="nombreSkill" name="nombreSkill">
+    </div>
+    <label for="staticEmail" class="col-sm-2 col-form-label">Skill</label>
+    <div class="col-sm-10 mt-4">
+        <input type="range" class="form-range input-range" [(ngModel)]="valorRango" name="valorRango" [title]="'Level: '+valorRango+'%'">
+    </div>
+    <label for="staticEmail" class="col-sm-2 col-form-label">Nivel</label><br>
+    <button class="btn btn-primary mt-2" type="submit">Agregar</button>
+</form>
