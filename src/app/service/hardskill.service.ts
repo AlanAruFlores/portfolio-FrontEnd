@@ -7,8 +7,8 @@ import { HardSkill } from '../models/hardskill';
   providedIn: 'root'
 })
 export class HardskillService {
-  //HTTP_URL:string = "https://backendportfolio-y0h8.onrender.com/hs";
-  HTTP_URL:string = "http://localhost:8080/hs";
+  HTTP_URL:string = "https://backendportfolio-y0h8.onrender.com/hs";
+  //HTTP_URL:string = "http://localhost:8080/hs";
   constructor(private http: HttpClient) { }
 
   public getSkills():Observable<HardSkill[]>{

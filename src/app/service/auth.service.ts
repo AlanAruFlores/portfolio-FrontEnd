@@ -9,8 +9,8 @@ import { NuevoUsuario } from '../models/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  //HTTP_URL = "https://backendportfolio-y0h8.onrender.com/auth";
-  HTTP_URL = "http://localhost:8080/auth";
+  HTTP_URL = "https://backendportfolio-y0h8.onrender.com/auth";
+  //HTTP_URL = "http://localhost:8080/auth";
   constructor(private http : HttpClient) { }
 
   public register(nuevoUsuario: NuevoUsuario):Observable<NuevoUsuario>{
