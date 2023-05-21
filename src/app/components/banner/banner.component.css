@@ -1,4 +1,26 @@
+h3{
+    padding-top: 15%;
+    font-size: 3.4rem;
+    text-align: center;
+}
 .banner-body{
-    height: 40rem;
-    background-color: #181a1a;
+    transition: 1s;
+    height: 44rem;
+    background-size:cover;
+    background-image: url("../../../assets/BANNER.jpg");
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: darken;
+    color:transparent;
+}
+.box{
+    opacity: 0;
+}
+.banner-body:hover{
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: darken;
+    color:#ededed;
+}
+.banner-body:hover .box{
+    opacity: 1;
 }

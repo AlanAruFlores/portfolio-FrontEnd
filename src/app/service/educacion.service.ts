@@ -8,7 +8,8 @@ import { Experiencia } from '../models/experiencia';
   providedIn: 'root'
 })
 export class EducacionService {
-  HTTP_URL="http://localhost:8080/educacion"
+  HTTP_URL="https://backendportfolio-y0h8.onrender.com/educacion"
+  //HTTP_URL="http://localhost:8080/educacion"
   constructor(private http:HttpClient) { }
 
   public getList():Observable<Educacion[]>{

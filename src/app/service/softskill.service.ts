@@ -7,7 +7,8 @@ import { SoftSkill } from '../models/softskill';
   providedIn: 'root'
 })
 export class SoftskillService {
-  HTTP_URL:string = "http://localhost:8080/ss";
+  HTTP_URL:string = "https://backendportfolio-y0h8.onrender.com/ss";
+  //HTTP_URL:string = "http://localhost:8080/ss";
   constructor(private http:HttpClient) { }
 
   public getSkills():Observable<SoftSkill[]>{

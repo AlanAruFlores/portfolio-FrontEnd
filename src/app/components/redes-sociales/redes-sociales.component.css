@@ -10,10 +10,26 @@
     color:#ff764d;
     transition: 1s;
 }
+.btn-social{
+    transition: 1s;
+    color:#ff764d;
+    border-bottom: #ff764d solid 1px;
+}
+.btn-social:hover{
+    transition: 1s;
+    color:#ededed;
+    border-bottom: #ededed solid 1px;
+}
 .nav-button{
+    transition: 1s;
     border-radius: 0%;
     color:white;
     background-color: #ff764d;
+}
+.nav-button:hover{
+    transition: 1s;
+    color:#ff764d;
+    background-color: #ededed;
 }
 @media(max-width: 991px){  
     ul{
