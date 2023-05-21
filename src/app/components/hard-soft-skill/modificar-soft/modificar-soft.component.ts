@@ -23,7 +23,8 @@ export class ModificarSoftComponent implements OnInit {
   constructor(private softService: SoftskillService, private builder:FormBuilder) 
   {
     this.forms = builder.group({
-      nombre:['',Validators.required]
+      nombre:['',Validators.required],
+      rango:['',Validators.required]
     })
   }
 

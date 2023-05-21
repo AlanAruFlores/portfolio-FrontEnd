@@ -1,6 +1,4 @@
-.containter{
-    margin-top: 4rem;
-}
+
 .title-text{
     color:#f6f6f6;
     font-weight: bold;
@@ -15,7 +13,7 @@
     margin-top: 2rem;
 }
 .skill-section{
-    margin: 1.7rem;
+    margin: 2rem 0rem;
     /* border-left: #ff764d 0.4rem solid; */
 } 
 .skill-column{

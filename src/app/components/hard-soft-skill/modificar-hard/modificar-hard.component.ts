@@ -14,7 +14,7 @@ export class ModificarHardComponent implements OnInit {
 
   //Atributos de edicion
   nombreSkill:string="";
-  rangoSkill: number=0;
+  rangoSkill:number=0;
 
   //ValidarFormulario
   forms: FormGroup;
@@ -23,7 +23,8 @@ export class ModificarHardComponent implements OnInit {
   constructor(private hardService:HardskillService, private builder:FormBuilder) 
   {
     this.forms = builder.group({
-      nombre:['',Validators.required]
+      nombre:['',Validators.required],
+      rango:['',Validators.required]
     })
   }
 
